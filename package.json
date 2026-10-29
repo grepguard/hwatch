@@ -1,0 +1,42 @@
+{
+  "name": "hwatchjs",
+  "version": "0.0.1",
+  "description": "Hardware health intelligence for servers and racks.",
+  "homepage": "https://github.com/grepguard/hwatch#readme",
+  "bugs": {
+    "url": "https://github.com/grepguard/hwatch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grepguard/hwatch.git"
+  },
+  "license": "MIT",
+  "author": "bereilhp",
+  "type": "module",
+  "bin": {
+    "hwatch": "./bin/hwatch.js"
+  },
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "keywords": [
+    "hardware",
+    "monitoring",
+    "server",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "format": "biome format --write",
+    "lint": "biome lint --write",
+    "check": "biome check --write",
+    "check:ci": "biome check",
+    "prepublishOnly": "npm run check:ci"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.3"
+  }
+}
